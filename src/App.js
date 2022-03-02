@@ -8,19 +8,32 @@ import About from './pages/about/index'
 import Footer from './components/Footer/index'
 import { Routes, Route } from 'react-router-dom'
 
+import Login from './pages/Login/index'
+
+import UserContext from './contexts/UserContext'
+
+import { useContext, useState } from 'react'
+
 
 const App = () => {
+
+  const [user, setUser] = useState('')
+
   return (
     <div>
-<Nav />
-<Routes>
-  <Route path='/' element={<Home />} />
-  <Route path='posts' element={<Posts />} />
-  <Route path='subscribers' element={<Subscribers />} />
-  <Route path='Contact' element={<Contact />} />
-  <Route path='About' element={<About />} />
-</Routes>
-<Footer />
+      <UserContext.Provider value={user}>
+        <Nav />
+        <Routes>
+          <Route path='login' element={<Login />} />
+          <Route path='/' element={<Home />} />
+          <Route path='posts' element={<Posts />} />
+          <Route path='subscribers' element={<Subscribers />} />
+          <Route path='Contact' element={<Contact />} />
+          <Route path='About' element={<About />} />
+        </Routes>
+        <Footer />
+
+      </UserContext.Provider>
     </div>
   );
 }

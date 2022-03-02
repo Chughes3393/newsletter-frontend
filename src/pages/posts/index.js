@@ -26,6 +26,7 @@ const Posts = () => {
     const deletePosts = async (id) => {
         try {
             const response = await axios.delete(`http://localhost:8081/api/v1/newsletter/post/${id}`)
+            console.log(response)
             fetchPosts()
         } catch (err) {
             console.log(err)

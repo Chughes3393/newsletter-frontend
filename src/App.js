@@ -12,7 +12,7 @@ import Login from './pages/Login/index'
 
 import UserContext from './contexts/UserContext'
 
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 
 
 const App = () => {

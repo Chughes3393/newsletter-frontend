@@ -60,7 +60,7 @@ const Subscribers = () => {
                     {subscribers.map(subscribers => {
                         return (
                             <tr key={subscribers.id}>
-                                <th scope="row">1</th>
+                                <th scope="row">{subscribers.id}</th>
                                 <td data-label="First Name">{subscribers.firstname}</td>
                                 <td data-label="Last Name">{subscribers.lastname}</td>
                                 <td data-label="Email">{subscribers.email}</td>

@@ -52,7 +52,7 @@ const Posts = () => {
           posts.map(posts => {
                 return (
                     <tr key={posts.id}>
-                    <th scope="row">1</th>
+                    <th scope="row">{posts.id}</th>
                     <td data-label="Title">{posts.title}</td>
                     <td data-label="Subtitle">{posts.subtitle}</td>
                     <td data-label="Content">{posts.content}</td>

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './styles.css'
 
 const Login = ({ setUser }) => {
     const [username, setUsername] = useState('')
@@ -17,11 +16,8 @@ const Login = ({ setUser }) => {
 
         // we can use useNavigate from RR to redirect our users to a different page/component
         // do not forget the forward slash in front of path in navigate
-        navigate('/pokemon/list')
+        navigate('/posts')
     }
-
-    // console.log('props', setUser())
-    // console.log('state in login', username)
 
     return (
         <form className='mx-auto border p-2 m-2' id='login-form' onSubmit={handleSubmit}>
@@ -51,4 +47,3 @@ const Login = ({ setUser }) => {
 }
 
 export default Login;
-

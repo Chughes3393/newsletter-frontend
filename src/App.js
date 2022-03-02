@@ -24,7 +24,7 @@ const App = () => {
       <UserContext.Provider value={user}>
         <Nav />
         <Routes>
-          <Route path='login' element={<Login />} />
+          <Route path='login' element={<Login setUser={setUser} />} />
           <Route path='/' element={<Home />} />
           <Route path='posts' element={<Posts />} />
           <Route path='subscribers' element={<Subscribers />} />

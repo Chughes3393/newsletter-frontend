@@ -6,6 +6,8 @@ import SubscriberF from '../../components/subscriber-form';
 const Subscribers = () => {
 
     const [subscribers, setSubscribers] = useState([])
+    const [editForm, setEditForm] = useState(false)
+    const [subscriberToEdit, setSubscriberToEdit] = useState({})
 
     useEffect(() => {
         fetchSubscribers()
@@ -33,17 +35,17 @@ const Subscribers = () => {
         }
     }
 
-    // const handleEdit = (subscribers) => {
-    //     setEditForm(true)
-    //     setSubscribersToEdit(subscribers)
-    // }
+    const handleEdit = (subscribers) => {
+        setEditForm(true)
+        setSubscriberToEdit(subscribers)
+    }
 
     return (
         <>
             <SubscriberF
                 fetchSubscribers={fetchSubscribers}
-                // editForm={editForm}
-                // subscriberToEdit={subscriberToEdit} 
+                editForm={editForm}
+                subscriberToEdit={subscriberToEdit} 
                 />
 
             <table className="table table-dark table-striped">
@@ -70,7 +72,7 @@ const Subscribers = () => {
                                     <i className="bi bi-trash" onClick={() => deleteSubscribers(subscribers.id)} ></i>
 
                                     <i className="bi bi-pen" 
-                                    // onClick={() => handleEdit(subscribers)}
+                                    onClick={() => handleEdit(subscribers)}
                                     ></i>
                                 </td>
 

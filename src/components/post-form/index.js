@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios'
 
-// Post Form Component
+// Post Form Component -- passing functions from one component to another
 const Postf = ({ fetchPosts, editForm, postToEdit }) => {
 
     // setting state for variables of columns of tables

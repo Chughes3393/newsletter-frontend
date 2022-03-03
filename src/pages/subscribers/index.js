@@ -25,7 +25,7 @@ const Subscribers = () => {
 
     const deleteSubscribers = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:8081/api/v1/newsletter/post/${id}`)
+            const response = await axios.delete(`http://localhost:8081/api/v1/newsletter/subscriber/${id}`)
             console.log(response)
             fetchSubscribers()
         } catch (err) {
@@ -41,7 +41,7 @@ const Subscribers = () => {
     return (
         <>
             <SubscriberF
-                // fetchSubscribers={fetchSubscribers}
+                fetchSubscribers={fetchSubscribers}
                 // editForm={editForm}
                 // subscriberToEdit={subscriberToEdit} 
                 />

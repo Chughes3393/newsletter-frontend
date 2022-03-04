@@ -21,7 +21,6 @@ const Signup = ({ fetchSubscribers, editForm, subscriberToEdit, addSubscribers }
                 const response = await axios.post(`http://localhost:8081/api/v1/newsletter/addsubscriber`, newSubscriber)
 
                 if (response.status === 200) {
-
                     setEmail('')
                 }
             }
@@ -31,8 +30,6 @@ const Signup = ({ fetchSubscribers, editForm, subscriberToEdit, addSubscribers }
             console.log(err)
         }
     }
-
-
 
     return (
         <div>

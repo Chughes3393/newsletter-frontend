@@ -2,7 +2,7 @@ import { useState } from 'react';
 import axios from 'axios'
 
 // Post Form Component -- passing functions from one component to another
-const Postf = ({ fetchPosts, editForm, postToEdit }) => {
+const Postf = ({ fetchPosts, editForm, postToEdit, setEditForm }) => {
 
     // setting state for variables of columns of tables
     const [title, setTitle] = useState('')
@@ -23,6 +23,14 @@ const Postf = ({ fetchPosts, editForm, postToEdit }) => {
 
                 const response = await axios.put(`http://localhost:8081/api/v1/newsletter/posts/${postToEdit.id}`, newPost)
                 console.log(response)
+
+                if (response.status === 200) {
+                    setTitle('')
+                    setSubTitle('')
+                    setContent('')
+                    setEditForm(false)
+                }
+
             } else {
                 const response = await axios.post(`http://localhost:8081/api/v1/newsletter/addpost`, newPost)
 
@@ -83,7 +91,7 @@ const Postf = ({ fetchPosts, editForm, postToEdit }) => {
                     />
                 </div>
 
-                <button type="submit" className="btn btn-primary">{editForm ? "Editing" : "Add"}</button>
+                <button type="submit" className="btn btn-primary">{editForm ? "Post" : "Add"}</button>
             </form>
         </div>
     );

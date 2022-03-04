@@ -43,6 +43,7 @@ const Posts = () => {
             <Postf
                 fetchPosts={fetchPosts}
                 editForm={editForm}
+                setEditForm={setEditForm}
                 postToEdit={postToEdit}
             />
 

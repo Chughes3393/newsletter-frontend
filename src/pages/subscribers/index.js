@@ -44,6 +44,7 @@ const Subscribers = () => {
             <SubscriberF
                 fetchSubscribers={fetchSubscribers}
                 editForm={editForm}
+                setEditForm={setEditForm}
                 subscriberToEdit={subscriberToEdit} 
                 />
 

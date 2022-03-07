@@ -1,0 +1,8 @@
+#main-div{
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-div {
+    padding-bottom: 5rem;
+}

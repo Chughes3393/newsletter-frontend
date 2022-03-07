@@ -14,13 +14,16 @@ import UserContext from './contexts/UserContext'
 
 import { useState } from 'react'
 
+import '../src/App.css'
+
 
 const App = () => {
 
   const [user, setUser] = useState('')
 
   return (
-    <div>
+    <div id='main-div'>
+      <div id='content-div'>
       <UserContext.Provider value={user}>
         <Nav />
         <Routes>
@@ -32,6 +35,7 @@ const App = () => {
         </Routes>
         <Footer />
       </UserContext.Provider>
+      </div>
     </div>
   );
 }

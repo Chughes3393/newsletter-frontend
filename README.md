@@ -1,3 +1,54 @@
+Technologies used:
+
+Jumbalaya is a newsletter application created with ReactJs and Bootstrap. This app has responsive mobile design and uses EmailJS on the contact form to automically send the admin an email of any user questions or comments.
+
+I built this project using React functional components, Context Provider, React Router, Axios, JQuery, HTML, Bootstrap Icons, and CSS.
+
+This application links up with a PostGreSQL database via Java and Spring Tool Suite 4, written in Java 17.
+
+[Live Site]() (Deployed on Heroku)
+
+[Backend]() (Deployed on Heroku)
+
+[Figma](https://www.figma.com/file/fWYtxppSY74glrcWLnyiBq/Newsletter_App?node-id=0%3A1)
+
+Approach:
+
+I used npx create-react-app and laid out the basis of my website using React Router: Home Page (which also functions as a sign up page), Login page (for User Contexts, and in the future, actual authentication), a working contact page using EmailJS, and for the admin, a posts page where you can view, edit, delete, and make new posts, as well as a subscribers page where you can view, edit, delete and add new subscribers. 
+
+The sign-up form on the home page actually uses CRUD functionality to add new subscribers to my database.
+
+Once I had my pages and functionality in mind I built out my backend using a PostGreSQL database via Spring Tool Suite and Java.
+
+My endpoints, also listed in my wireframe are: 
+
+GET         READ            'allsubscribers'  'allposts'        
+PUT         UPDATE          'subscriber/{id}' 'post/{id}'
+POST        CREATE          'addsubscriber'   'addpost'
+DELETE      DELETE          'subscriber/{id}' 'post/{id}'
+
+I have two models that correspend to two controllers. One model/ controller is for my posts. the other model/ controller is for my subscribers. I use @RequestController, @CrossOrigin, @AutoWired, and various @Mapping Java notations for my backend.
+
+Purpose of project as a problem statement:
+
+I want to create the perfect newsletter application that combines the best of all the existing newsletter applications, and puts these elements into one new application, the one to rule them all. 
+
+Specifically I want to create a subscription based newsletter service where your readers can pay you for your writing, but also has the design potential and analytic capabilities of MailChimp or the simplicity of Tiny Letter. While there is still a lot of work to be done, Jumbalaya aims to be your new newsletter provider. 
+
+Target End User:
+
+Are you a fed-up content creator not knowing which newsletter application to use? Well I am too, which is why I created Jumbalaya, named that because Jumbalaya is one of my favorite Hank Williams song's and it just stuck.
+
+When complete, this application will be your online publication for your subscribers, a sign-up sheet for your subscribers in the waiting, and an editing salon for you while you crank out the best content an inbox has seen this side of Silicon Valley. We will also set up a subscription service for you so you can earn royalties off your digital/verbal gold you spew.
+
+Unsolved Problems:
+
+Maintain ReadMe and deploy my two applications on a live website.
+
+I want to build out administrator, guest, and subscriber functionality/ contexts. I want to figure out how to actually send an email out to my subscribers stored in my database.
+
+///// &&&&& ///// &&&&& ///// &&&&& ///// &&&&& ///// &&&&& ///// &&&&& ///// &&&&& ///// &&&&& 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

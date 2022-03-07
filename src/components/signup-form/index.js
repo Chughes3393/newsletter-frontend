@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios'
+import './styles.css'
 
 const Signup = ({ fetchSubscribers, editForm, subscriberToEdit, addSubscribers }) => {
 
@@ -32,14 +33,15 @@ const Signup = ({ fetchSubscribers, editForm, subscriberToEdit, addSubscribers }
     }
 
     return (
-        <div>
+        <div id='form-div'>
             <form className='mx-auto border p-2 m-2' id='signup-form' onSubmit={handleSubmit}>
 
-                <div className="mb-3">
+                <div id='signup-form' className="mb-3">
 
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
+                    <label htmlFor="exampleInputEmail1" className="form-label" >Enter Your Email:</label>
                     <input type="email"
                         className="form-control"
+                        // id='signup-input'
                         id="exampleInputUserEmail"
                         aria-describedby="UserHelp"
                         name='email'

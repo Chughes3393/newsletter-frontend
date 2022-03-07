@@ -31,7 +31,6 @@ const App = () => {
           <Route path='Contact' element={<Contact />} />
         </Routes>
         <Footer />
-
       </UserContext.Provider>
     </div>
   );

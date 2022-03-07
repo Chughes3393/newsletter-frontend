@@ -1,0 +1,30 @@
+#login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    max-width: 50%;
+}
+
+#form-div1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#exampleInputPassword1 {
+    width: 250px;
+}
+
+#exampleInputUserName{
+    width: 250px;
+}
+
+#pw-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

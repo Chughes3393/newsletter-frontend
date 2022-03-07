@@ -46,7 +46,7 @@ const Home = () => {
 
         <div>
             <div id='about'>
-            <p>About:</p>
+
             <p>Jumbalaya is an email newsletter service featuring the writings of Chris Hues.</p>
             <p>Sign up to get it in your inbox from time to time. </p>
             </div>

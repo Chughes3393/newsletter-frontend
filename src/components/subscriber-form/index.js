@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios'
+import './styles.css'
 
 const SubscriberF = ({ fetchSubscribers, editForm, subscriberToEdit, setEditForm }) => {
 
@@ -45,10 +46,12 @@ const SubscriberF = ({ fetchSubscribers, editForm, subscriberToEdit, setEditForm
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputTitle" className="form-label">First Name</label>
+
+        <div className="container mt-4 mb-3" id='sub-form-div'>
+            <form className='row g-2' onSubmit={handleSubmit}>
+
+                <div className="col-md-6">
+                    <label htmlFor="exampleInputTitle" className="form-label">First Name:</label>
                     <input type="text"
                         className="form-control"
                         id="exampleInputTitle1"
@@ -60,8 +63,8 @@ const SubscriberF = ({ fetchSubscribers, editForm, subscriberToEdit, setEditForm
                     />
                 </div>
 
-                <div className="mb-3">
-                    <label htmlFor="exampleInputSubtitle1" className="form-label">Last Name</label>
+                <div className="col-md-6">
+                    <label htmlFor="exampleInputSubtitle1" className="form-label">Last Name:</label>
                     <input type="text"
                         className="form-control"
                         id="exampleInputSubtitle1"
@@ -73,8 +76,8 @@ const SubscriberF = ({ fetchSubscribers, editForm, subscriberToEdit, setEditForm
 
                 </div>
 
-                <div className="mb-3">
-                    <label htmlFor="exampleEmail1" className="form-label">Email</label>
+                <div className="col-md-8" id='sub-email-div'>
+                    <label htmlFor="exampleEmail1" className="form-label">Email:</label>
                     <input type="text"
                         className="form-control"
                         id="exampleEmail1"
@@ -85,7 +88,10 @@ const SubscriberF = ({ fetchSubscribers, editForm, subscriberToEdit, setEditForm
                     />
                 </div>
 
-                <button type="submit" className="btn btn-primary">{editForm ? "Add Subscriber" : "Add"}</button>
+                <div id='button-div1'>
+                    <button type="submit" className="btn btn-primary">{editForm ? "Add Subscriber" : "Add"}</button>
+                </div>
+
             </form>
 
         </div>

@@ -45,42 +45,45 @@ const Subscribers = () => {
                 fetchSubscribers={fetchSubscribers}
                 editForm={editForm}
                 setEditForm={setEditForm}
-                subscriberToEdit={subscriberToEdit} 
-                />
+                subscriberToEdit={subscriberToEdit}
+            />
 
-            <table className="table table-dark table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Edit</th>
-                    </tr>
-                </thead>
+            <div className='container mp-3'>
 
-                <tbody>
-                    {subscribers.map(subscribers => {
-                        return (
-                            <tr key={subscribers.id}>
-                                <th scope="row">{subscribers.id}</th>
-                                <td data-label="First Name">{subscribers.firstname}</td>
-                                <td data-label="Last Name">{subscribers.lastname}</td>
-                                <td data-label="Email">{subscribers.email}</td>
+                <table className="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            {/* <th scope="col">#</th> */}
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Edit</th>
+                        </tr>
+                    </thead>
 
-                                <td data-label="Edit">
-                                    <i className="bi bi-trash" onClick={() => deleteSubscribers(subscribers.id)} ></i>
+                    <tbody>
+                        {subscribers.map(subscribers => {
+                            return (
+                                <tr key={subscribers.id}>
+                                    {/* <th scope="row">{subscribers.id}</th> */}
+                                    <td data-label="First Name">{subscribers.firstname}</td>
+                                    <td data-label="Last Name">{subscribers.lastname}</td>
+                                    <td data-label="Email">{subscribers.email}</td>
 
-                                    <i className="bi bi-pen" 
-                                    onClick={() => handleEdit(subscribers)}
-                                    ></i>
-                                </td>
+                                    <td data-label="Edit">
+                                        <i className="bi bi-trash" onClick={() => deleteSubscribers(subscribers.id)} ></i>
 
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
+                                        <i className="bi bi-pen"
+                                            onClick={() => handleEdit(subscribers)}
+                                        ></i>
+                                    </td>
+
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
+            </div>
         </>
     );
 }

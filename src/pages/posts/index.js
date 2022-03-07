@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Postf from '../../components/post-form/index'
+import './styles.css'
 
 const Posts = () => {
 
@@ -47,23 +48,23 @@ const Posts = () => {
                 postToEdit={postToEdit}
             />
 
-            <div>
+            <div className='container mp-3'>
                 <table className="table table-dark table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            {/* <th scope="col">#</th> */}
                             <th scope="col">Title</th>
                             <th scope="col">Subtitle</th>
                             <th scope="col">Content</th>
                             <th scope="col">Edit</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
                         {
                             posts.map(posts => {
                                 return (
                                     <tr key={posts.id}>
-                                        <th scope="row">{posts.id}</th>
+                                        {/* <th scope="row">{posts.id}</th> */}
                                         <td data-label="Title">{posts.title}</td>
                                         <td data-label="Subtitle">{posts.subtitle}</td>
                                         <td data-label="Content">{posts.content}</td>

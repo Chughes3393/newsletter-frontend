@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios'
+import './styles.css'
 
 // Post Form Component -- passing functions from one component to another
 const Postf = ({ fetchPosts, editForm, postToEdit, setEditForm }) => {
@@ -48,8 +49,8 @@ const Postf = ({ fetchPosts, editForm, postToEdit, setEditForm }) => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="container mt-4 mb-3">
+            <form className='mb-3' onSubmit={handleSubmit}>
 
                 <div className="mb-3">
                     <label htmlFor="InputTitle" className="form-label">Title</label>
@@ -90,8 +91,9 @@ const Postf = ({ fetchPosts, editForm, postToEdit, setEditForm }) => {
                         onChange={e => setContent(e.target.value)}
                     />
                 </div>
-
-                <button type="submit" className="btn btn-primary">{editForm ? "Post" : "Add"}</button>
+                <div id='button-div2'>
+                    <button type="submit" className="btn btn-primary">{editForm ? "Post" : "Add"}</button>
+                </div>
             </form>
         </div>
     );

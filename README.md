@@ -6,9 +6,9 @@ I built this project using React functional components, Context Provider, React 
 
 This application links up with a PostGreSQL database via Java and Spring Tool Suite 4, written in Java 17.
 
-[Live Site]() (Deployed on Heroku)
+[Live Site](https://newsletter-frontend.herokuapp.com/) (Deployed on Heroku)
 
-[Backend]() (Deployed on Heroku)
+[Backend](https://newsletter-appp.herokuapp.com/) (Deployed on Heroku)
 
 [Figma](https://www.figma.com/file/fWYtxppSY74glrcWLnyiBq/Newsletter_App?node-id=0%3A1)
 

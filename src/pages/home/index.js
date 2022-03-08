@@ -15,7 +15,7 @@ const Home = () => {
 
     const fetchSubscribers = async () => {
         try {
-            const response = await axios.get('http://localhost:8081/api/v1/newsletter/allsubscribers')
+            const response = await axios.get('https://newsletter-appp.herokuapp.com/api/v1/newsletter/allsubscribers')
 
             // console.log(response)
             setSubscribers(response.data)
@@ -27,7 +27,7 @@ const Home = () => {
 
     const addSubscriber = async () => {
         try {
-            const response = await axios.post(`http://localhost:8082/api/v1/newsletter/addsubscriber/`)
+            const response = await axios.post(`https://newsletter-appp.herokuapp.com/api/v1/newsletter/addsubscriber/`)
             console.log(response)
             fetchSubscribers()
 

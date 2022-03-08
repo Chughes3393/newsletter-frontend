@@ -14,7 +14,7 @@ const Subscribers = () => {
 
     const fetchSubscribers = async () => {
         try {
-            const response = await axios.get('http://localhost:8081/api/v1/newsletter/allsubscribers')
+            const response = await axios.get('https://newsletter-appp.herokuapp.com/api/v1/newsletter/allsubscribers')
 
             // console.log(response)
             setSubscribers(response.data)
@@ -26,7 +26,7 @@ const Subscribers = () => {
 
     const deleteSubscribers = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:8081/api/v1/newsletter/subscriber/${id}`)
+            const response = await axios.delete(`https://newsletter-appp.herokuapp.com/api/v1/newsletter/subscriber/${id}`)
             console.log(response)
             fetchSubscribers()
         } catch (err) {

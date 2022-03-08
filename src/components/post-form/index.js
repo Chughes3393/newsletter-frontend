@@ -22,7 +22,7 @@ const Postf = ({ fetchPosts, editForm, postToEdit, setEditForm }) => {
         try {
             if (editForm) {
 
-                const response = await axios.put(`http://localhost:8081/api/v1/newsletter/posts/${postToEdit.id}`, newPost)
+                const response = await axios.put(`https://newsletter-appp.herokuapp.com/api/v1/newsletter/posts/${postToEdit.id}`, newPost)
                 console.log(response)
 
                 if (response.status === 200) {
@@ -33,7 +33,7 @@ const Postf = ({ fetchPosts, editForm, postToEdit, setEditForm }) => {
                 }
 
             } else {
-                const response = await axios.post(`http://localhost:8081/api/v1/newsletter/addpost`, newPost)
+                const response = await axios.post(`https://newsletter-appp.herokuapp.com/api/v1/newsletter/addpost`, newPost)
 
                 if (response.status === 200) {
                     setTitle('')

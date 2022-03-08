@@ -16,10 +16,10 @@ const Signup = ({ fetchSubscribers, editForm, subscriberToEdit, addSubscribers }
         try {
             if (editForm) {
 
-                const response = await axios.put(`http://localhost:8081/api/v1/newsletter/subscriber/${subscriberToEdit.id}`, newSubscriber)
+                const response = await axios.put(`https://newsletter-appp.herokuapp.com/api/v1/newsletter/subscriber/${subscriberToEdit.id}`, newSubscriber)
                 console.log(response)
             } else {
-                const response = await axios.post(`http://localhost:8081/api/v1/newsletter/addsubscriber`, newSubscriber)
+                const response = await axios.post(`https://newsletter-appp.herokuapp.com/api/v1/newsletter/addsubscriber`, newSubscriber)
 
                 if (response.status === 200) {
                     setEmail('')

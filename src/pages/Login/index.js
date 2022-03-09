@@ -18,7 +18,7 @@ const Login = ({ setUser }) => {
 
         // we can use useNavigate from RR to redirect our users to a different page/component
         // do not forget the forward slash in front of path in navigate
-        navigate('/posts')
+        navigate('/')
     }
 
     return (
